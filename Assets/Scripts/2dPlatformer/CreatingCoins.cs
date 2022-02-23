@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CreatingObjects : MonoBehaviour
+public class CreatingCoins : MonoBehaviour
 {
-    [SerializeField] private GameObject _template;
+    [SerializeField] private GameObject _coin;
     [SerializeField] private Transform[] _points;
     [SerializeField] private float _coolDown;
 
@@ -19,7 +18,7 @@ public class CreatingObjects : MonoBehaviour
 
         for (int i = 0; i < _points.Length; i++)
         {
-            Instantiate(_template, _points[i].position, Quaternion.identity);
+            Instantiate(_coin, _points[i].position, Quaternion.identity);
 
             yield return waitForSeconds;
         }

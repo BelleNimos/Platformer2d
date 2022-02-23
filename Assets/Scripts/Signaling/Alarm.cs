@@ -1,9 +1,8 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(AudioSource))]
-public class AlarmTrigger : MonoBehaviour
+public class Alarm : MonoBehaviour
 {
     private AudioSource _audioSource;
     private Coroutine _coroutine;

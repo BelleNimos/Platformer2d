@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -9,15 +7,15 @@ public class CoinPicker : MonoBehaviour
 
     private int _coinsCount = 0;
 
-    private const string _coinTag = "Coin";
+    private const string CoinTag = "Coin";
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == _coinTag)
+        if (collision.gameObject.tag == CoinTag)
         {
+            Destroy(collision.gameObject);
             _coinsCount++;
             _coinsText.text = _coinsCount.ToString();
-            Destroy(collision.gameObject);
         }
     }
 }
